@@ -40,7 +40,6 @@ class EcuacionCuadraticaActivity : AppCompatActivity() {
                 var b : Double = txtB.text.toString().toDouble()
                 var c : Double = txtC.text.toString().toDouble()
                 var discriminante : Double = (Math.pow(b, 2.0) - (4*a*c))
-                var resImaginaria : Boolean = false
 
                 // Calculando respuestas con números complejos (raíz cuadrada de números negativos)
                 if (discriminante < 0) {
