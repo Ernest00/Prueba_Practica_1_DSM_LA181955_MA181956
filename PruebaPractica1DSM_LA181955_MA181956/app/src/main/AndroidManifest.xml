@@ -10,10 +10,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.PruebaPractica1DSM_LA181955_MA181956"
+        android:noHistory="true"
         tools:targetApi="31">
         <activity
-            android:name=".Prueba"
-            android:exported="false" />
+            android:name=".Opciones"
+            android:exported="false"
+            android:noHistory="true"
+            />
         <activity
             android:name=".MainActivity"
             android:exported="true"
