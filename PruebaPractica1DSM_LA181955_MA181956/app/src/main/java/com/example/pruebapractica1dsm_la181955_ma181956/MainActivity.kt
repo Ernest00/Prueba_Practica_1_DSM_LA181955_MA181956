@@ -63,7 +63,6 @@ class MainActivity : AppCompatActivity() {
 
          /*Abrir nueva Activity*/
          if(user.toString()==usuarioActivo && pass.toString()==passwordActiva){
-             Toast.makeText(this, "Correcto", Toast.LENGTH_SHORT).show()
              var intent = Intent( this, Opciones::class.java)
              startActivity(intent)
          }else{
@@ -72,24 +71,6 @@ class MainActivity : AppCompatActivity() {
      }
  }
 
-    override fun onResume() {
-        super.onResume()
-        //Toast.makeText(this, "onResume Login", Toast.LENGTH_SHORT).show()
-        Log.i("Estado", "onResume Login")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        //Toast.makeText(this, "onPause Login", Toast.LENGTH_SHORT).show()
-        Log.i("Estado", "onPause Login")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        //Toast.makeText(this, "onStop Login", Toast.LENGTH_SHORT).show()
-        Log.i("Estado", "onStop Login")
-    }
-
     override fun onRestart() {
         super.onRestart()
         txt_user = findViewById<EditText>(R.id.et_user)
@@ -97,14 +78,7 @@ class MainActivity : AppCompatActivity() {
 
         txt_pass.setText("")
         txt_user.setText("")
-        //Toast.makeText(this, "onRestart Login", Toast.LENGTH_SHORT).show()
-        Log.i("Estado", "onRestart Login")
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        //Toast.makeText(this, "onDestroy Login", Toast.LENGTH_SHORT).show()
-        Log.i("Estado", "onDestroy Login")
-    }
 
 }
