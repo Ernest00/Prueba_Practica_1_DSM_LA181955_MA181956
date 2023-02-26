@@ -7,171 +7,150 @@
     android:background="#0A1045"
     android:padding="30sp"
     android:textAlignment="center"
-    tools:context=".FichaVendedorActivity"
-    tools:menu="Hola">
-
-    <TextView
-        android:id="@+id/txtTituloFichaVendedor"
+    tools:context=".FichaVendedorActivity">
+    <ScrollView
+        android:id="@+id/scrollVertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_regular"
-        android:text="Ficha de vendedor"
-        android:textAlignment="center"
-        android:textColor="#f2f2f2"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="5dp" />
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/roboto_regular"
-        android:text="Nombre completo:"
-        android:textColor="#f2f2f2"
-        android:textSize="17sp"
-        app:layout_constraintTop_toBottomOf="@+id/txtTituloFichaVendedor"
-        tools:layout_editor_absoluteX="3dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/txtTituloFichaVendedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Ficha de vendedor"
+                android:textAlignment="center"
+                android:textColor="#f2f2f2"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="5dp" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/roboto_regular"
-        android:text="Código de empleado:"
-        android:textColor="#f2f2f2"
-        android:textSize="17sp"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombre"
-        tools:layout_editor_absoluteX="3dp" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Nombre completo:"
+                android:textColor="#f2f2f2"
+                android:textSize="17sp"
+                tools:layout_editor_absoluteX="3dp" />
+            <EditText
+                android:id="@+id/txtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#f2f2f2"
+                tools:layout_editor_absoluteX="4dp" />
+            <TextView
+                android:id="@+id/txtErrorNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#E91E63"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="-1dp" />
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Código de empleado:"
+                android:textColor="#f2f2f2"
+                android:textSize="17sp"
+                tools:layout_editor_absoluteX="3dp" />
+            <EditText
+                android:id="@+id/txtCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:textColor="#f2f2f2"
+                tools:layout_editor_absoluteX="0dp" />
+            <TextView
+                android:id="@+id/txtErrorCodigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#E91E63"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Total de ventas ($):"
+                android:textColor="#f2f2f2"
+                android:textSize="17sp"
+                tools:layout_editor_absoluteX="3dp" />
+            <EditText
+                android:id="@+id/txtTotalVentas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:textColor="#f2f2f2"
+                tools:layout_editor_absoluteX="3dp" />
+            <TextView
+                android:id="@+id/txtErrorVentas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#E91E63"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="3dp" />
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Mes:"
+                android:textColor="#f2f2f2"
+                android:textSize="17sp"
+                tools:layout_editor_absoluteX="3dp" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/roboto_regular"
-        android:text="Total de ventas ($):"
-        android:textColor="#f2f2f2"
-        android:textSize="17sp"
-        app:layout_constraintTop_toBottomOf="@+id/txtCodigo"
-        tools:layout_editor_absoluteX="3dp" />
+            <Spinner
+                android:id="@+id/listaMeses"
+                style="@android:style/Widget.Spinner.DropDown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:background="#247BA0"
+                android:dropDownWidth="match_parent"
+                android:paddingTop="8sp"
+                android:paddingBottom="8sp"
+                android:popupBackground="#247BA0"
+                tools:layout_editor_absoluteX="1dp" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/roboto_regular"
-        android:text="Mes:"
-        android:textColor="#f2f2f2"
-        android:textSize="17sp"
-        app:layout_constraintTop_toBottomOf="@+id/txtTotalVentas"
-        tools:layout_editor_absoluteX="3dp" />
+            <Button
+                android:id="@+id/btnCalcularFicha"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:backgroundTint="#FF8811"
+                android:backgroundTintMode="add"
+                android:text="Calcular"
+                android:textColor="#f2f2f2"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="31dp" />
 
-    <EditText
-        android:id="@+id/txtNombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textColor="#f2f2f2"
-        app:layout_constraintTop_toBottomOf="@+id/txtTituloFichaVendedor"
-        tools:layout_editor_absoluteX="4dp" />
-
-    <EditText
-        android:id="@+id/txtCodigo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:inputType="number"
-        android:textColor="#f2f2f2"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <EditText
-        android:id="@+id/txtTotalVentas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:inputType="number"
-        android:textColor="#f2f2f2"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        tools:layout_editor_absoluteX="3dp" />
-
-    <Spinner
-        android:id="@+id/listaMeses"
-        style="@android:style/Widget.Spinner.DropDown"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="#247BA0"
-        android:dropDownWidth="match_parent"
-        android:paddingTop="8sp"
-        android:paddingBottom="8sp"
-        android:popupBackground="#247BA0"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        tools:layout_editor_absoluteX="1dp" />
-
-    <Button
-        android:id="@+id/btnCalcularFicha"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="#FF8811"
-        android:backgroundTint="#FF8811"
-        android:backgroundTintMode="add"
-        android:text="Calcular"
-        android:textColor="#f2f2f2"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/listaMeses"
-        tools:layout_editor_absoluteX="31dp" />
-
-    <TextView
-        android:id="@+id/txtErrorNombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:textColor="#E91E63"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-1dp" />
-
-    <TextView
-        android:id="@+id/txtErrorCodigo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:textColor="#E91E63"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/txtCodigo"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <TextView
-        android:id="@+id/txtErrorVentas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:textColor="#E91E63"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/txtTotalVentas"
-        tools:layout_editor_absoluteX="3dp" />
-
-    <Button
-        android:id="@+id/btnVolverMenu1"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Volver"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalcularFicha"
-        tools:layout_editor_absoluteX="0dp" />
+            <Button
+                android:id="@+id/btnVolverMenu1"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:text="Volver"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="0dp" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
