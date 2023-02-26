@@ -12,24 +12,26 @@
         android:theme="@style/Theme.PruebaPractica1DSM_LA181955_MA181956"
         tools:targetApi="31">
         <activity
-            android:name=".EcuacionCuadraticaActivity"
-            android:exported="true"
-            android:noHistory="true">
-        </activity>
-        <activity
-            android:name=".Opciones"
-            android:exported="false"
-            android:noHistory="true"
-            />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.PruebaPractica1DSM_LA181955_MA181956.NoActionBar"
-            android:noHistory="true">
+            android:name=".FichaVendedorActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".EcuacionCuadraticaActivity"
+            android:exported="true"
+            android:noHistory="true"></activity>
+        <activity
+            android:name=".Opciones"
+            android:exported="false"
+            android:noHistory="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:noHistory="true"
+            android:theme="@style/Theme.PruebaPractica1DSM_LA181955_MA181956.NoActionBar">
         </activity>
     </application>
 
