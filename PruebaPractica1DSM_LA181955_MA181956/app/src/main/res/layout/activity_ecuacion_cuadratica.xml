@@ -127,7 +127,7 @@
 
     <Button
         android:id="@+id/btnCalcular"
-        style="@style/Widget.Material3.Button"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="290sp"
@@ -135,5 +135,14 @@
         android:backgroundTintMode="add"
         android:text="Calcular"
         android:textColor="#f2f2f2"
-        android:textSize="17sp" />
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnVolverMenu2"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450sp"
+        android:text="Volver"
+        android:textSize="16sp" />
 </RelativeLayout>
