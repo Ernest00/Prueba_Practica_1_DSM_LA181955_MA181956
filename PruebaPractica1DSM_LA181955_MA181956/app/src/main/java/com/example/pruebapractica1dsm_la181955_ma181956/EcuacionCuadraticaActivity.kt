@@ -62,4 +62,29 @@ class EcuacionCuadraticaActivity : AppCompatActivity() {
             }
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+        Toast.makeText(this, "onResume EC", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Toast.makeText(this, "onPause2 EC", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Toast.makeText(this, "onStop2 EC", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Toast.makeText(this, "onRestart2 EC", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Toast.makeText(this, "onDestroy2 EC", Toast.LENGTH_SHORT).show()
+    }
 }

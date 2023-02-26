@@ -4,6 +4,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tag">Inicie sesión para continuar</string>
     <string name="login">Iniciar sesión</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="credentials">Ver credenciales</string>
     <string name="password">Contraseña</string>
     <string name="e_mail">Usuario</string>
+    <string name="ejercicio1">Ficha de Vendedor</string>
+    <string name="ejercicio2">Ecuación Cuadrática</string>
+    <string name="indicacion">Seleccione que ejercicio mostrar:</string>
 </resources>

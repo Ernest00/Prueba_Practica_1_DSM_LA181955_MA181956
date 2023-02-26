@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    tools:context=".Opciones">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/indigo_daisy"
+        android:text="Bienvenid@"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/txtUsuario"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:enabled="false"
+        android:fontFamily="@font/roboto_regular"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="23sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/txtIndicacion"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="208dp"
+        android:enabled="false"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/indicacion"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/btn_ejercicio1"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignTop="@id/txtIndicacion"
+        android:layout_marginTop="45sp"
+        android:text="@string/ejercicio1"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btn_ejercicio2"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignTop="@id/btn_ejercicio1"
+        android:layout_marginTop="100sp"
+        android:text="@string/ejercicio2"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignTop="@id/btn_ejercicio2"
+        android:layout_marginTop="250sp"
+        android:text="@string/logout"
+        android:textAlignment="center" />
+
+
+
+</RelativeLayout>
