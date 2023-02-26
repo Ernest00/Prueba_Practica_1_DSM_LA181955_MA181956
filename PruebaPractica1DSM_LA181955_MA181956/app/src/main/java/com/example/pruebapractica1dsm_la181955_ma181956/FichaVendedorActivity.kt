@@ -59,13 +59,13 @@ class FichaVendedorActivity : AppCompatActivity() {
             }
 
             if(txtNombre.text.toString().trim().isEmpty()){
-txtErrorNombre.setText("No ha ingresado el nombre")
+                txtErrorNombre.setText("No ha ingresado el nombre del empleado")
             }else{
                 txtErrorNombre.setText("")
             }
 
             if(txtCodigo.text.toString().trim().isEmpty()){
-                txtErrorCodigo.setText("No ha ingresado el codigo")
+                txtErrorCodigo.setText("No ha ingresado el código del empleado")
             }else{
                 txtErrorCodigo.setText("")
             }
@@ -80,36 +80,5 @@ txtErrorNombre.setText("No ha ingresado el nombre")
         btnVolverMenu1.setOnClickListener {
             finish()
         }
-
-    }
-
-    override fun onResume() {
-        super.onResume()
-        //Toast.makeText(this, "onResume2", Toast.LENGTH_SHORT).show()
-        Log.i("Estado","onResume Ficha")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        //Toast.makeText(this, "onPause2", Toast.LENGTH_SHORT).show()
-        Log.i("Estado","onPause Ficha")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        //Toast.makeText(this, "onStop2", Toast.LENGTH_SHORT).show()
-        Log.i("Estado","onStop Ficha")
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        //Toast.makeText(this, "onRestart2", Toast.LENGTH_SHORT).show()
-        Log.i("Estado","onRestart Ficha")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        //Toast.makeText(this, "onDestroy2", Toast.LENGTH_SHORT).show()
-        Log.i("Estado","onDestroy Ficha")
     }
 }

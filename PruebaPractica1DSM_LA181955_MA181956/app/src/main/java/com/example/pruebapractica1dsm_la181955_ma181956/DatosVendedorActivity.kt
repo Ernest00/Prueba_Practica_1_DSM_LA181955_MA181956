@@ -41,17 +41,16 @@ class DatosVendedorActivity : AppCompatActivity() {
 
         txtResNombre.setText(nombre)
         txtResCodigo.setText(codigo)
-        txtResVentas.setText(total)
+        txtResVentas.setText("$" + total)
         txtResMes.setText(mes)
         txtResPorcentaje.setText((porc*100).toString()+" %")
-        txtResComisiones.setText(String.format("%.2f",comisiones))
+        txtResComisiones.setText("$" + String.format("%.2f",comisiones))
 
         btnVolver.setOnClickListener {
             finish()
         }
 
     }
-
 
     fun CalcularPorcentaje(total:Double): Double {
             if(total>=4000) {
@@ -67,36 +66,5 @@ class DatosVendedorActivity : AppCompatActivity() {
             }else{
                 return 0.0
             }
-
-    }
-
-    override fun onResume() {
-        super.onResume()
-        //Toast.makeText(this, "onResume2", Toast.LENGTH_SHORT).show()
-        Log.i("Estado","onResume DatosFicha")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        //Toast.makeText(this, "onPause2", Toast.LENGTH_SHORT).show()
-        Log.i("Estado","onPause DatosFicha")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        //Toast.makeText(this, "onStop2", Toast.LENGTH_SHORT).show()
-        Log.i("Estado","onStop DatosFicha")
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        //Toast.makeText(this, "onRestart2", Toast.LENGTH_SHORT).show()
-        Log.i("Estado","onRestart DatosFicha")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        //Toast.makeText(this, "onDestroy2", Toast.LENGTH_SHORT).show()
-        Log.i("Estado","onDestroy DatosFicha")
     }
 }
