@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#303F9F"
     android:padding="10dp"
     tools:context=".Opciones">
 
@@ -18,7 +19,7 @@
         android:textSize="50sp"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp"/>
+        tools:layout_editor_absoluteX="1dp" />
 
     <TextView
         android:id="@+id/txtUsuario"
@@ -29,7 +30,10 @@
         android:fontFamily="@font/roboto_regular"
         android:text=""
         android:textAlignment="center"
-        android:textSize="23sp"/>
+        android:textColor="#f2f2f2"
+        android:textColorHighlight="#f2f2f2"
+        android:textColorHint="#f2f2f2"
+        android:textSize="23sp" />
 
     <TextView
         android:id="@+id/txtIndicacion"
@@ -40,7 +44,8 @@
         android:fontFamily="@font/roboto_regular"
         android:text="@string/indicacion"
         android:textAlignment="center"
-        android:textSize="15sp"/>
+        android:textColor="#f2f2f2"
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/btn_ejercicio1"
@@ -49,7 +54,8 @@
         android:layout_alignTop="@id/txtIndicacion"
         android:layout_marginTop="45sp"
         android:text="@string/ejercicio1"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="#f2f2f2" />
 
     <Button
         android:id="@+id/btn_ejercicio2"
@@ -58,7 +64,8 @@
         android:layout_alignTop="@id/btn_ejercicio1"
         android:layout_marginTop="70sp"
         android:text="@string/ejercicio2"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="#f2f2f2" />
 
     <Button
         android:id="@+id/btn_logout"
@@ -67,8 +74,8 @@
         android:layout_alignTop="@id/btn_ejercicio2"
         android:layout_marginTop="200sp"
         android:text="@string/logout"
-        android:textAlignment="center" />
-
+        android:textAlignment="center"
+        android:textColor="#f2f2f2" />
 
 
 </RelativeLayout>
