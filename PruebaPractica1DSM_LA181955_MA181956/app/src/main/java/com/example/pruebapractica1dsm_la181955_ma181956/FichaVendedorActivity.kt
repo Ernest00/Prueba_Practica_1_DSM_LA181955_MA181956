@@ -37,7 +37,7 @@ class FichaVendedorActivity : AppCompatActivity() {
         }
 
         btnCalcular.setOnClickListener {
-
+            spinner.selectedItem
         }
     }
 }
