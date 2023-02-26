@@ -2,6 +2,7 @@ package com.example.pruebapractica1dsm_la181955_ma181956
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -16,6 +17,8 @@ class EcuacionCuadraticaActivity : AppCompatActivity() {
     private lateinit var txtX2 : TextView
     private lateinit var textoRespuesta : TextView
 
+    private lateinit var btnVolverMenu2 : Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ecuacion_cuadratica)
@@ -27,6 +30,7 @@ class EcuacionCuadraticaActivity : AppCompatActivity() {
         txtX1 = findViewById<TextView>(R.id.txtResX1)
         txtX2 = findViewById<TextView>(R.id.txtResX2)
         textoRespuesta = findViewById<TextView>(R.id.textoRespuesta)
+        btnVolverMenu2 = findViewById<Button>(R.id.btnVolverMenu2)
 
         btnCalcular.setOnClickListener {
             if (txtA.text.toString().isEmpty() || txtB.text.toString().isEmpty() || txtC.text.toString().isEmpty()) {
@@ -61,30 +65,40 @@ class EcuacionCuadraticaActivity : AppCompatActivity() {
                 }
             }
         }
+
+        btnVolverMenu2.setOnClickListener {
+            finish()
+        }
     }
+
 
     override fun onResume() {
         super.onResume()
-        Toast.makeText(this, "onResume EC", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "onResume2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onResume EC")
     }
 
     override fun onPause() {
         super.onPause()
-        Toast.makeText(this, "onPause2 EC", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "onPause2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onPause EC")
     }
 
     override fun onStop() {
         super.onStop()
-        Toast.makeText(this, "onStop2 EC", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "onStop2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onStop EC")
     }
 
     override fun onRestart() {
         super.onRestart()
-        Toast.makeText(this, "onRestart2 EC", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "onRestart2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onRestart EC")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Toast.makeText(this, "onDestroy2 EC", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "onDestroy2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onDestroy EC")
     }
 }

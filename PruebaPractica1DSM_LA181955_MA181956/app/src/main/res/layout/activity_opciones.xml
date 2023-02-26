@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="25dp"
+    android:padding="10dp"
     tools:context=".Opciones">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/indigo_daisy"
         android:text="Bienvenid@"
         android:textAlignment="center"
@@ -25,7 +25,7 @@
         android:id="@+id/txtUsuario"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="85dp"
         android:enabled="false"
         android:fontFamily="@font/roboto_regular"
         android:text=""
@@ -37,7 +37,7 @@
         android:id="@+id/txtIndicacion"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="158dp"
         android:enabled="false"
         android:fontFamily="@font/roboto_regular"
         android:text="@string/indicacion"
@@ -59,7 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_alignTop="@id/btn_ejercicio1"
-        android:layout_marginTop="100sp"
+        android:layout_marginTop="70sp"
         android:text="@string/ejercicio2"
         android:textAlignment="center" />
 
@@ -68,7 +68,7 @@
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_alignTop="@id/btn_ejercicio2"
-        android:layout_marginTop="250sp"
+        android:layout_marginTop="200sp"
         android:text="@string/logout"
         android:textAlignment="center" />
 

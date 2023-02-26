@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -19,7 +20,6 @@ class Opciones : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_opciones)
-        verificarSesion()
 
         txt_usuario =findViewById<TextView>(R.id.txtUsuario)
         btn_ejercicio1 = findViewById<Button>(R.id.btn_ejercicio1)
@@ -30,6 +30,11 @@ class Opciones : AppCompatActivity() {
 
         val usuarioActivo = preferences.getString("user", "no hay nada cargado")
         txt_usuario.setText(usuarioActivo)
+
+        btn_ejercicio1.setOnClickListener{
+            var intent = Intent( this, FichaVendedorActivity::class.java)
+            startActivity(intent)
+        }
 
         btn_ejercicio2.setOnClickListener{
             var intent = Intent( this, EcuacionCuadraticaActivity::class.java)
@@ -44,32 +49,32 @@ class Opciones : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        verificarSesion()
-        Toast.makeText(this, "onResume2", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "onResume2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onResume2")
     }
 
     override fun onPause() {
         super.onPause()
-        verificarSesion()
-        Toast.makeText(this, "onPause2", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "onPause2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onPause2")
     }
 
     override fun onStop() {
         super.onStop()
-        verificarSesion()
-        Toast.makeText(this, "onStop2", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "onStop2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onStop2")
     }
 
     override fun onRestart() {
         super.onRestart()
-        verificarSesion()
-        Toast.makeText(this, "onRestart2", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "onRestart2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onRestart2")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        verificarSesion()
-        Toast.makeText(this, "onDestroy2", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "onDestroy2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onDestroy2")
     }
 
     private fun restablecerPreferencias(){
@@ -87,11 +92,11 @@ class Opciones : AppCompatActivity() {
 
         val usuarioActivo = preferences.getString("user", "no hay nada cargado")
         val passwordActiva = preferences.getString("pass", "no hay nada cargao")
-
-        if(usuarioActivo.toString().isEmpty() && passwordActiva.toString().isEmpty()){
+finish()
+       /* if(usuarioActivo.toString().isEmpty() && passwordActiva.toString().isEmpty()){
             Toast.makeText(this, "Sin sesión", Toast.LENGTH_SHORT).show()
             var intent = Intent( this, MainActivity::class.java)
             startActivity(intent)
-        }
+        }*/
     }
 }

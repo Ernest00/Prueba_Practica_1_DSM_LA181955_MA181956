@@ -3,6 +3,7 @@ package com.example.pruebapractica1dsm_la181955_ma181956
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
@@ -13,7 +14,6 @@ import org.w3c.dom.Text
 class FichaVendedorActivity : AppCompatActivity() {
     private lateinit var spinner: Spinner
     private lateinit var btnCalcular : Button
-    private lateinit var txtPrueba : TextView
     private lateinit var txtNombre : EditText
     private lateinit var txtCodigo : EditText
     private lateinit var txtTotalVenta : EditText
@@ -21,6 +21,8 @@ class FichaVendedorActivity : AppCompatActivity() {
     private lateinit var txtErrorNombre : TextView
     private lateinit var txtErrorCodigo : TextView
     private lateinit var txtErrorVentas : TextView
+
+    private lateinit var btnVolverMenu1 : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +36,7 @@ class FichaVendedorActivity : AppCompatActivity() {
         txtErrorCodigo = findViewById<TextView>(R.id.txtErrorCodigo)
         txtTotalVenta = findViewById<EditText>(R.id.txtTotalVentas)
         txtErrorVentas = findViewById<TextView>(R.id.txtErrorVentas)
+        btnVolverMenu1 = findViewById<Button>(R.id.btnVolverMenu1)
 
         // Cargando el listado de meses desde un array de recursos al objeto spinner (dropdown)
         ArrayAdapter.createFromResource(
@@ -74,5 +77,39 @@ txtErrorNombre.setText("No ha ingresado el nombre")
             }
         }
 
+        btnVolverMenu1.setOnClickListener {
+            finish()
+        }
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        //Toast.makeText(this, "onResume2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onResume Ficha")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        //Toast.makeText(this, "onPause2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onPause Ficha")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        //Toast.makeText(this, "onStop2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onStop Ficha")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        //Toast.makeText(this, "onRestart2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onRestart Ficha")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        //Toast.makeText(this, "onDestroy2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onDestroy Ficha")
     }
 }

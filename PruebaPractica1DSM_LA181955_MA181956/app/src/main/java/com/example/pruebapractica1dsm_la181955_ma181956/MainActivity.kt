@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -19,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-cargarPreferencias("usuario1", "12345")
         btn_login = findViewById<Button>(R.id.btn_login)
         btn_credenciales = findViewById<Button>(R.id.btn_verCredenciales)
         txt_user = findViewById<EditText>(R.id.et_user)
@@ -30,7 +30,7 @@ cargarPreferencias("usuario1", "12345")
         }
 
         btn_credenciales.setOnClickListener {
-            cargarPreferencias2("usuario1", "12345")
+            cargarPreferencias("administrador", "1234")
         }
     }
 
@@ -42,18 +42,12 @@ cargarPreferencias("usuario1", "12345")
         editor.putString("pass",pass)
 
         editor.commit()
-    }
-    private fun cargarPreferencias2(user: String, pass:String){
-        val preferences: SharedPreferences = getSharedPreferences("credenciales", MODE_PRIVATE)
-        val editor: SharedPreferences.Editor = preferences.edit()
-
-        editor.putString("user",user)
-        editor.putString("pass",pass)
-
-        editor.commit()
 
         val usuarioActivo = preferences.getString("user", "no hay nada cargado")
         val passwordActiva = preferences.getString("pass", "no hay nada cargado")
+
+        txt_user.setText(usuarioActivo)
+        txt_pass.setText(passwordActiva)
         Toast.makeText(this, "Usuario: ${usuarioActivo} \ncontraseña: ${passwordActiva}", Toast.LENGTH_LONG).show()
 
     }
@@ -80,18 +74,20 @@ cargarPreferencias("usuario1", "12345")
 
     override fun onResume() {
         super.onResume()
-        Toast.makeText(this, "onResume Login", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "onResume Login", Toast.LENGTH_SHORT).show()
+        Log.i("Estado", "onResume Login")
     }
 
     override fun onPause() {
         super.onPause()
-        Toast.makeText(this, "onPause Login", Toast.LENGTH_SHORT).show()
-        finish()
+        //Toast.makeText(this, "onPause Login", Toast.LENGTH_SHORT).show()
+        Log.i("Estado", "onPause Login")
     }
 
     override fun onStop() {
         super.onStop()
-        Toast.makeText(this, "onStop Login", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "onStop Login", Toast.LENGTH_SHORT).show()
+        Log.i("Estado", "onStop Login")
     }
 
     override fun onRestart() {
@@ -101,12 +97,14 @@ cargarPreferencias("usuario1", "12345")
 
         txt_pass.setText("")
         txt_user.setText("")
-        Toast.makeText(this, "onRestart Login", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "onRestart Login", Toast.LENGTH_SHORT).show()
+        Log.i("Estado", "onRestart Login")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Toast.makeText(this, "onDestroy Login", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "onDestroy Login", Toast.LENGTH_SHORT).show()
+        Log.i("Estado", "onDestroy Login")
     }
 
 }

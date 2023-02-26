@@ -3,6 +3,7 @@ package com.example.pruebapractica1dsm_la181955_ma181956
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -16,10 +17,10 @@ class DatosVendedorActivity : AppCompatActivity() {
     private lateinit var txtResMes : TextView
     private lateinit var txtResPorcentaje : TextView
     private lateinit var txtResComisiones : TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_datos_vendedor)
-
         txtResNombre = findViewById<TextView>(R.id.txtResNombre)
         txtResCodigo = findViewById<TextView>(R.id.txtResCodigo)
         txtResVentas = findViewById<TextView>(R.id.txtResVentas)
@@ -43,11 +44,10 @@ class DatosVendedorActivity : AppCompatActivity() {
         txtResVentas.setText(total)
         txtResMes.setText(mes)
         txtResPorcentaje.setText((porc*100).toString()+" %")
-        txtResComisiones.setText(comisiones.toString())
+        txtResComisiones.setText(String.format("%.2f",comisiones))
 
         btnVolver.setOnClickListener {
-            var intent = Intent(this, FichaVendedorActivity::class.java)
-            startActivity(intent)
+            finish()
         }
 
     }
@@ -68,5 +68,35 @@ class DatosVendedorActivity : AppCompatActivity() {
                 return 0.0
             }
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        //Toast.makeText(this, "onResume2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onResume DatosFicha")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        //Toast.makeText(this, "onPause2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onPause DatosFicha")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        //Toast.makeText(this, "onStop2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onStop DatosFicha")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        //Toast.makeText(this, "onRestart2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onRestart DatosFicha")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        //Toast.makeText(this, "onDestroy2", Toast.LENGTH_SHORT).show()
+        Log.i("Estado","onDestroy DatosFicha")
     }
 }

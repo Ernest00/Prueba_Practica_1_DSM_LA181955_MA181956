@@ -90,12 +90,13 @@
                 android:textColor="#f2f2f2"
                 android:textSize="17sp"
                 tools:layout_editor_absoluteX="3dp" />
+
             <EditText
                 android:id="@+id/txtTotalVentas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="number"
+                android:inputType="number|numberDecimal"
                 android:textColor="#f2f2f2"
                 tools:layout_editor_absoluteX="3dp" />
             <TextView
