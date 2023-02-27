@@ -16,6 +16,7 @@
         android:padding="10sp"
         android:text="Cálculo de raíces de ecuación cuadrática"
         android:textAlignment="center"
+        android:textColor="#f2f2f2"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -27,6 +28,7 @@
         android:fontFamily="@font/roboto_regular"
         android:text="Ingrese los coeficientes del polinomio:"
         android:textAlignment="center"
+        android:textColor="#f2f2f2"
         android:textSize="15sp" />
 
     <ImageView
@@ -44,6 +46,7 @@
         android:fontFamily="@font/roboto_regular"
         android:text="A:"
         android:textAlignment="center"
+        android:textColor="#f2f2f2"
         android:textSize="16sp" />
 
     <TextView
@@ -55,6 +58,7 @@
         android:fontFamily="@font/roboto_regular"
         android:text="B:"
         android:textAlignment="center"
+        android:textColor="#f2f2f2"
         android:textSize="16sp" />
 
     <TextView
@@ -66,6 +70,7 @@
         android:fontFamily="@font/roboto_regular"
         android:text="C:"
         android:textAlignment="center"
+        android:textColor="#f2f2f2"
         android:textSize="16sp" />
 
     <EditText
@@ -75,7 +80,8 @@
         android:layout_marginTop="230sp"
         android:ems="10"
         android:fontFamily="@font/roboto_regular"
-        android:inputType="numberSigned|number|numberDecimal" />
+        android:inputType="numberSigned|number|numberDecimal"
+        android:textColor="#f2f2f2" />
 
     <EditText
         android:id="@+id/txtNumberB"
@@ -85,7 +91,8 @@
         android:layout_marginTop="230sp"
         android:ems="10"
         android:fontFamily="@font/roboto_regular"
-        android:inputType="numberSigned|number|numberDecimal" />
+        android:inputType="numberSigned|number|numberDecimal"
+        android:textColor="#f2f2f2" />
 
     <EditText
         android:id="@+id/txtNumberC"
@@ -95,7 +102,8 @@
         android:layout_marginTop="230sp"
         android:ems="10"
         android:fontFamily="@font/roboto_regular"
-        android:inputType="numberSigned|number|numberDecimal" />
+        android:inputType="numberSigned|number|numberDecimal"
+        android:textColor="#f2f2f2" />
 
     <TextView
         android:id="@+id/textoRespuesta"
@@ -104,6 +112,7 @@
         android:layout_marginTop="355sp"
         android:fontFamily="@font/roboto_regular"
         android:text="Resultados:"
+        android:textColor="#f2f2f2"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -114,6 +123,7 @@
         android:layout_marginTop="390sp"
         android:fontFamily="@font/roboto_regular"
         android:text="X1:"
+        android:textColor="#f2f2f2"
         android:textStyle="bold" />
 
     <TextView
@@ -123,6 +133,7 @@
         android:layout_marginTop="420sp"
         android:fontFamily="@font/roboto_regular"
         android:text="X2:"
+        android:textColor="#f2f2f2"
         android:textStyle="bold" />
 
     <Button

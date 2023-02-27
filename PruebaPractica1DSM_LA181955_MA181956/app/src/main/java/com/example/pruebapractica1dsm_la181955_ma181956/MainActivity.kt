@@ -25,12 +25,14 @@ class MainActivity : AppCompatActivity() {
         txt_user = findViewById<EditText>(R.id.et_user)
         txt_pass = findViewById<EditText>(R.id.et_password)
 
+        cargarPreferencias("administrador", "1234")
+
         btn_login.setOnClickListener {
             this.Login(txt_user.text.toString().trim(), txt_pass.text.toString().trim())
         }
 
         btn_credenciales.setOnClickListener {
-            cargarPreferencias("administrador", "1234")
+            Toast.makeText(this, "Usuario: administrador \n Contraseña: 1234", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -49,7 +51,6 @@ class MainActivity : AppCompatActivity() {
         txt_user.setText(usuarioActivo)
         txt_pass.setText(passwordActiva)
         Toast.makeText(this, "Usuario: ${usuarioActivo} \ncontraseña: ${passwordActiva}", Toast.LENGTH_LONG).show()
-
     }
 
  fun Login(user:String,pass:String){
@@ -75,10 +76,9 @@ class MainActivity : AppCompatActivity() {
         super.onRestart()
         txt_user = findViewById<EditText>(R.id.et_user)
         txt_pass = findViewById<EditText>(R.id.et_password)
-
+        cargarPreferencias("administrador", "1234")
         txt_pass.setText("")
         txt_user.setText("")
     }
-
 
 }
